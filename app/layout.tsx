@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
+import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -10,8 +11,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Qatar Furniture Decor Services",
-  description: "Professional carpentry services for your home and business",
+  title: "Qatar Furniture & Curtain Services",
+  description: "Professional furniture and curtain services for your home",
 };
 
 export default function RootLayout({
@@ -32,6 +33,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <WhatsAppButton />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

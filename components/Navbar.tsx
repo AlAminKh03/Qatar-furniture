@@ -16,6 +16,7 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
+    { href: "/work", label: "Our Work" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -42,7 +43,9 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button>Get Quote</Button>
+              <Link href="/quote">
+                <Button>Get Quote</Button>
+              </Link>
               <Button
                 variant="ghost"
                 size="icon"
@@ -97,7 +100,9 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full">Get Quote</Button>
+              <Link href="/quote">
+                <Button className="w-full">Get Quote</Button>
+              </Link>
             </div>
           </div>
         </div>

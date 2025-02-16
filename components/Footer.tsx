@@ -39,16 +39,26 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/quote" className="text-sm hover:underline">
+                  Get a Quote
+                </Link>
+              </li>
+              <li>
+                <Link href="/work" className="text-sm hover:underline">
+                  Our Work
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li className="text-sm">Custom Furniture</li>
-              <li className="text-sm">Kitchen Remodeling</li>
-              <li className="text-sm">Deck Construction</li>
-              <li className="text-sm">Cabinet Installation</li>
+              <li className="text-sm">Custom Furniture Making</li>
+              <li className="text-sm">Furniture Repair & Upholstery</li>
+              <li className="text-sm">Curtain & Blind Installation</li>
+              <li className="text-sm">Cabinet & TV Stand Installation</li>
             </ul>
           </div>
 

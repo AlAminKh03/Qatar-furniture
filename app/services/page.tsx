@@ -7,14 +7,87 @@ import {
   staggerItem,
 } from "@/lib/animations";
 import { motion } from "framer-motion";
+import {
+  Hammer,
+  Home,
+  PencilRuler,
+  Scissors,
+  Settings,
+  Sofa,
+} from "lucide-react";
 
-const services: {
-  icon: JSX.Element;
-  title: string;
-  description: string;
-  features: string[];
-}[] = [
-  // ... your services array ...
+const services = [
+  {
+    icon: <PencilRuler className="h-12 w-12 text-primary" />,
+    title: "Custom Furniture Design",
+    description:
+      "Bespoke furniture pieces crafted to your exact specifications.",
+    features: [
+      "Personalized consultation",
+      "3D design visualization",
+      "Premium material selection",
+      "Expert craftsmanship",
+    ],
+  },
+  {
+    icon: <Hammer className="h-12 w-12 text-primary" />,
+    title: "Furniture Repair & Restoration",
+    description:
+      "Expert repair services for all types of furniture - from antiques to modern pieces. We fix chairs, tables, beds, sofas, and any furniture item.",
+    features: [
+      "All furniture types",
+      "Structural repairs",
+      "Surface refinishing",
+      "Hardware fixes",
+    ],
+  },
+  {
+    icon: <Scissors className="h-12 w-12 text-primary" />,
+    title: "Curtain & Drapery Services",
+    description: "Complete curtain solutions from design to installation.",
+    features: [
+      "Custom curtain design",
+      "Professional installation",
+      "Wide fabric selection",
+      "Smart motorized options",
+    ],
+  },
+  {
+    icon: <Settings className="h-12 w-12 text-primary" />,
+    title: "Furniture Maintenance",
+    description:
+      "Regular maintenance services to keep your furniture in perfect condition.",
+    features: [
+      "Preventive care",
+      "Hardware replacement",
+      "Surface treatment",
+      "Joint tightening",
+    ],
+  },
+  {
+    icon: <Sofa className="h-12 w-12 text-primary" />,
+    title: "Upholstery Services",
+    description:
+      "Transform your furniture with our premium upholstery services.",
+    features: [
+      "Fabric reupholstery",
+      "Leather work",
+      "Cushion replacement",
+      "Style updates",
+    ],
+  },
+  {
+    icon: <Home className="h-12 w-12 text-primary" />,
+    title: "Home Furniture Assembly",
+    description:
+      "Professional assembly and installation of all types of furniture.",
+    features: [
+      "Expert assembly",
+      "Secure mounting",
+      "Location setup",
+      "Quality inspection",
+    ],
+  },
 ];
 
 export default function ServicesPage() {
@@ -33,7 +106,7 @@ export default function ServicesPage() {
           variants={fadeIn}
           className="text-muted-foreground max-w-2xl mx-auto"
         >
-          Discover our comprehensive range of carpentry services
+          Discover our comprehensive range of furniture and curtain services
         </motion.p>
       </motion.div>
 
