@@ -313,7 +313,7 @@ export default function Home() {
                     viewport={{ once: true }}
                   >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                      Best Furniture at Affordable Prices
+                      Expert Furniture Services in Qatar
                     </h2>
                     <p className="text-lg md:text-xl text-muted-foreground mb-6">
                       Discover our collection of premium furniture that combines
@@ -349,7 +349,7 @@ export default function Home() {
                     className="relative h-full"
                   >
                     <Image
-                      src="/furniture-showcase.jpg" // You'll need to add this image
+                      src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80"
                       alt="Luxury Furniture Showcase"
                       fill
                       className="object-cover rounded-r-lg"
