@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
@@ -24,7 +23,7 @@ const services = [
   "ARABIC MAJLIS MAKING",
   "NEW SOFA MAKING",
   "SOFA CHAIR UPHOLSTERY",
-  "CABINET/CUPBOARD INSTALLATION",
+  "WARDROBE/CLOSET INSTALLATION",
   "WALLPAPER INSTALLATION",
   "BED/HEAD BOX INSTALLATION",
   "BLIND INSTALLATION",
@@ -65,22 +64,20 @@ export default function QuotePage() {
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      const templateParams = {
-        to_name: "Qatar Furniture Team",
-        from_name: data.name,
-        from_email: data.email,
-        phone: data.phone,
-        location: data.location,
-        service: data.service,
-        message: data.details || "No additional details provided",
-      };
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
 
-      await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        templateParams,
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+      const response = await fetch(
+        "https://formsubmit.co/ajax/qatarfurnituredecor@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+        }
       );
+
+      if (!response.ok) throw new Error("Submission failed");
 
       toast({
         title: "Quote Request Sent",
@@ -225,6 +222,15 @@ export default function QuotePage() {
                   "Request Quote"
                 )}
               </Button>
+
+              {/* Hidden fields for FormSubmit configuration */}
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Quote Request from Website"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
             </form>
           </CardContent>
         </Card>

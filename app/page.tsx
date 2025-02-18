@@ -166,7 +166,7 @@ export default function Home() {
       name: "Ahmed Al Emadi",
       role: "Business Owner",
       content:
-        "Outstanding cabinet and TV unit installation. The quality of work and professional service exceeded our expectations.",
+        "Outstanding TV table  installation. The quality of work and professional service exceeded our expectations.",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
       rating: 5,
@@ -194,7 +194,7 @@ export default function Home() {
       name: "Abdullah Al Kuwari",
       role: "Property Developer",
       content:
-        "We've used their services for multiple properties. Their custom almira and wardrobe solutions are excellent. Very reliable team.",
+        "We've used their services for multiple properties. Their custom wardrobe and wardrobe solutions are excellent. Very reliable team.",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
       rating: 5,
@@ -223,14 +223,14 @@ export default function Home() {
       category: "Curtains",
     },
     {
-      title: "Modern TV Cabinet",
+      title: "Modern TV Table",
       image: "/cabinet/tv1.jpg",
-      category: "Cabinet",
+      category: "Table",
     },
     {
-      title: "Custom Almira",
+      title: "Custom Wardrobe",
       image: "/almira/almira1.jpg",
-      category: "Almira",
+      category: "Wardrobe",
     },
     {
       title: "Premium Sofa",

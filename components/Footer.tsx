@@ -58,7 +58,7 @@ const Footer = () => {
               <li className="text-sm">Custom Furniture Making</li>
               <li className="text-sm">Furniture Repair & Upholstery</li>
               <li className="text-sm">Curtain & Blind Installation</li>
-              <li className="text-sm">Cabinet & TV Stand Installation</li>
+              <li className="text-sm">TV Table Installation</li>
             </ul>
           </div>
 
@@ -67,17 +67,15 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">(555) 123-4567</span>
+                <span className="text-sm">+974 66631317</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">info@mastercarpentry.com</span>
+                <span className="text-sm">qatarfurnituredecor@gmail.com</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span className="text-sm">
-                  123 Woodwork Lane, Carpenter City
-                </span>
+                <span className="text-sm">Al Mansoura,Doha-Qatar</span>
               </li>
             </ul>
           </div>

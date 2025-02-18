@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 export function WhatsAppButton() {
-  // Replace with your actual WhatsApp number
-  const whatsappNumber = "1234567890";
+  // Format: Remove spaces and any special characters, just keep the numbers
+  const whatsappNumber = "97466631317"; // Removed the + and spaces
   const message = encodeURIComponent(
-    "Hi! I'm interested in your carpentry services."
+    "Hi! I'm interested in your furniture services."
   );
 
   return (

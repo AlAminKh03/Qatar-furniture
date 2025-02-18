@@ -10,8 +10,8 @@ import { useState } from "react";
 // Define categories based on your folder structure
 const categories = [
   "All",
-  "Almira",
-  "Cabinet",
+  "Wardrobe",
+  "TV Table",
   "Carpet",
   "Curtain",
   "Sofa",
@@ -28,8 +28,8 @@ const workItems = [
     isBeforeAfter: true,
   },
   {
-    title: "Custom Almira Design",
-    category: "Almira",
+    title: "Custom Wardrobe Design",
+    category: "Wardrobe",
     description: "Built-in wardrobe with modern design",
     images: ["/almira/almira1.jpg"],
     location: "Al Waab, Doha",
@@ -52,9 +52,9 @@ const workItems = [
     location: "West Bay, Doha",
   },
   {
-    title: "Cabinet Installation",
-    category: "Cabinet",
-    description: "Custom kitchen cabinets",
+    title: "TV Table Installation",
+    category: "TV Table",
+    description: "Custom TV Table",
     images: [
       "/cabinet/tv1.jpg",
       "/cabinet/tv-cabinet2.jpg",
