@@ -1,6 +1,13 @@
 export const heroSlides = [
   {
     image:
+      "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80",
+    title: "Luxury Bedroom Setup",
+    description:
+      "Complete bedroom solutions - from beds to wardrobes and elegant decor",
+  },
+  {
+    image:
       "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&q=80",
     title: "Expert Furniture Services",
     description:
@@ -17,12 +24,5 @@ export const heroSlides = [
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80",
     title: "Professional Upholstery",
     description: "Transform your furniture with our expert upholstery services",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80",
-    title: "Furniture Repair & Restoration",
-    description:
-      "We repair all types of furniture - from antiques to modern pieces",
   },
 ];

@@ -22,7 +22,7 @@ import * as z from "zod";
 const services = [
   "ARABIC MAJLIS MAKING",
   "NEW SOFA MAKING",
-  "SOFA CHAIR UPHOLSTERY",
+  "ALL UPHOLSTERY SERVICE",
   "WARDROBE/CLOSET INSTALLATION",
   "WALLPAPER INSTALLATION",
   "BED/HEAD BOX INSTALLATION",
@@ -30,8 +30,9 @@ const services = [
   "CURTAIN INSTALLATION",
   "DINING TABLE MAKING",
   "DRESSING MIRROR MAKING",
-  "BARKIYA PVC",
+  "BARKIYA SPC",
   "TV Stand Installation Services",
+  "BEDROOM SETUP",
   "Others",
 ] as const;
 
@@ -65,9 +66,64 @@ export default function QuotePage() {
     setIsSubmitting(true);
     try {
       const formData = new FormData();
+
+      // Create an HTML email template
+      const emailTemplate = `
+        <h2>New Quote Request</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+          <tr style="background-color: #f8f9fa;">
+            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Field</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Information</th>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #dee2e6;"><strong>Name</strong></td>
+            <td style="padding: 12px; border: 1px solid #dee2e6;">${
+              data.name
+            }</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #dee2e6;"><strong>Email</strong></td>
+            <td style="padding: 12px; border: 1px solid #dee2e6;">${
+              data.email
+            }</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #dee2e6;"><strong>Phone</strong></td>
+            <td style="padding: 12px; border: 1px solid #dee2e6;">${
+              data.phone
+            }</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #dee2e6;"><strong>Location</strong></td>
+            <td style="padding: 12px; border: 1px solid #dee2e6;">${
+              data.location
+            }</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #dee2e6;"><strong>Service Requested</strong></td>
+            <td style="padding: 12px; border: 1px solid #dee2e6;">${
+              data.service
+            }</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #dee2e6;"><strong>Additional Details</strong></td>
+            <td style="padding: 12px; border: 1px solid #dee2e6;">${
+              data.details || "No additional details provided"
+            }</td>
+          </tr>
+        </table>
+      `;
+
+      // Add all form data
       Object.entries(data).forEach(([key, value]) => {
-        formData.append(key, value);
+        formData.append(key, value as string);
       });
+
+      // Add email template and configuration
+      formData.append("_template", "box");
+      formData.append("_subject", `New Quote Request from ${data.name}`);
+      formData.append("_captcha", "false");
+      formData.append("_html", emailTemplate);
 
       const response = await fetch(
         "https://formsubmit.co/ajax/qatarfurnituredecor@gmail.com",

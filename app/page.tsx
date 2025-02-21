@@ -1,5 +1,7 @@
 "use client";
+import { ContactButtons } from "@/components/ContactButtons";
 import { HeroSlider } from "@/components/home/HeroSlider";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -9,7 +11,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
-  Hammer,
   HeartHandshake,
   Palette,
   PencilRuler,
@@ -117,15 +118,15 @@ export default function Home() {
       ],
     },
     {
-      icon: <Hammer className="h-12 w-12 mb-4 text-primary" />,
-      title: "Furniture Repair",
+      icon: <Palette className="h-12 w-12 mb-4 text-primary" />,
+      title: "Wood Flooring",
       description:
-        "Expert repair services for all types of furniture. From fixing broken chairs and tables to restoring sofas and beds - we repair it all.",
+        "Premium flooring solutions including SPC, Barkiya PVC, and waterproof options. Transform your space with durable and elegant flooring.",
       features: [
-        "All furniture types",
-        "Professional repairs",
-        "Surface refinishing",
-        "Hardware replacement",
+        "SPC flooring installation",
+        "Waterproof solutions",
+        "Barkiya PVC options",
+        "Professional fitting",
       ],
     },
     {
@@ -180,7 +181,7 @@ export default function Home() {
       name: "Maryam Al Thani",
       role: "Interior Designer",
       content:
-        "Their carpet installation service is impeccable. The team is highly skilled and professional. The results are always perfect.",
+        "Their barkiya installation service is impeccable. The team is highly skilled and professional. The results are always perfect.",
       image:
         "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80",
       rating: 5,
@@ -238,9 +239,9 @@ export default function Home() {
       category: "Sofa",
     },
     {
-      title: "Elegant Carpet Installation",
+      title: "Barkiya SPC",
       image: "/carpet/carpet1.jpg",
-      category: "Carpet",
+      category: "Barkiya",
     },
     {
       title: "Modern Curtain Design",
@@ -798,6 +799,10 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* Replace WhatsAppButton with ContactButtons */}
+      <ContactButtons />
+      <SocialLinks />
     </div>
   );
 }

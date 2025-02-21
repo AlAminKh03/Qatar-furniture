@@ -15,6 +15,7 @@ const categories = [
   "Carpet",
   "Curtain",
   "Sofa",
+  "Majlish",
 ] as const;
 
 // Define work items based on your folder structure
@@ -23,7 +24,7 @@ const workItems = [
     title: "Modern Sofa Reupholstery",
     category: "Sofa",
     description: "Complete sofa transformation with premium fabric",
-    images: ["/sofa/sofa-living-room-3.jpg"],
+    images: ["/sofa/sofa-final.jpg"],
     location: "Pearl Qatar",
     isBeforeAfter: true,
   },
@@ -79,6 +80,21 @@ const workItems = [
       "/carpet/carpet8.jpg",
     ],
     location: "Lusail, Doha",
+  },
+  {
+    title: "Modern Majlish Design",
+    category: "Majlish",
+    description:
+      "Custom Majlish with premium materials and traditional elements",
+    images: [
+      "sofa/sofa-living-room2.jpg",
+      "sofa/sofa-living-room-3.jpg",
+      "sofa/sofa-living-room-4.jpg",
+      "sofa/sofa-living-room-5.jpg",
+      "sofa/sofa-living-room-6.jpg",
+      "sofa/sofa-living-room-9.jpg",
+    ],
+    location: "The Pearl, Doha",
   },
   // Add more items based on your actual images...
 ];
