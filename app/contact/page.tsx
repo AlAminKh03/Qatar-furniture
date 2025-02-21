@@ -61,7 +61,7 @@ export default function Contact() {
                   <Phone className="h-6 w-6" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-muted-foreground">+974 66631317</p>
                   </div>
                 </CardContent>
               </Card>
@@ -72,7 +72,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold">Email</h3>
                     <p className="text-muted-foreground">
-                      info@mastercarpentry.com
+                      qatarfurnituredecor@gmail.com
                     </p>
                   </div>
                 </CardContent>

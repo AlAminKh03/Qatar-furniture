@@ -14,8 +14,7 @@ export const heroSlides = [
       "Custom furniture making & professional repair services in Qatar",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80",
+    image: "/curtain/curtain-hero-1.jpg",
     title: "Premium Curtain Solutions",
     description: "Complete curtain and blind installation services",
   },
