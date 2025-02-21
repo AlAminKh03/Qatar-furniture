@@ -24,7 +24,7 @@ const workItems = [
     title: "Modern Sofa Reupholstery",
     category: "Sofa",
     description: "Complete sofa transformation with premium fabric",
-    images: ["/sofa/sofa-final.jpg"],
+    images: ["/sofa/sofafinal-1.jpg"],
     location: "Pearl Qatar",
     isBeforeAfter: true,
   },

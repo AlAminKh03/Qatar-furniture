@@ -2,6 +2,8 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
+import { ContactButtons } from "@/components/ContactButtons";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
@@ -32,6 +34,8 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <SocialLinks />
+          <ContactButtons />
           <WhatsAppButton />
           <Toaster />
         </ThemeProvider>

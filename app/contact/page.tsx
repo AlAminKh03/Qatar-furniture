@@ -84,9 +84,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold">Address</h3>
                     <p className="text-muted-foreground">
-                      123 Woodwork Lane
-                      <br />
-                      Carpenter City, ST 12345
+                      Al Mansoura,Doha-Qatar
                     </p>
                   </div>
                 </CardContent>
