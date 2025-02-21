@@ -1,14 +1,10 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
 import { FaSnapchatGhost } from "react-icons/fa";
-import { IoShareSocial } from "react-icons/io5";
 
 export function SocialLinks() {
-  const [isOpen, setIsOpen] = useState(false);
-
   const socialLinks = [
     {
       name: "Instagram",
@@ -38,55 +34,35 @@ export function SocialLinks() {
   ];
 
   return (
-    <div className="fixed left-6 bottom-6 z-40 flex flex-col items-center">
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="flex flex-col gap-4 mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-          >
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow ${social.bgColor}`}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                {typeof social.icon === "string" ? (
-                  <Image
-                    src={social.icon}
-                    alt={social.name}
-                    width={24}
-                    height={24}
-                    className="w-6 h-6"
-                  />
-                ) : (
-                  <social.icon
-                    className={`w-6 h-6 ${social.iconColor || "text-gray-700"}`}
-                  />
-                )}
-              </motion.a>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <IoShareSocial className="w-6 h-6 text-gray-700" />
-      </motion.button>
+    <div className="fixed left-6 bottom-6 z-40 flex flex-col gap-4">
+      {socialLinks.map((social, index) => (
+        <motion.a
+          key={social.name}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow ${social.bgColor}`}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: index * 0.1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          {typeof social.icon === "string" ? (
+            <Image
+              src={social.icon}
+              alt={social.name}
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
+          ) : (
+            <social.icon
+              className={`w-6 h-6 ${social.iconColor || "text-gray-700"}`}
+            />
+          )}
+        </motion.a>
+      ))}
     </div>
   );
 }
