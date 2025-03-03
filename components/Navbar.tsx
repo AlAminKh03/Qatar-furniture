@@ -1,14 +1,17 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { Hammer, Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -38,7 +41,12 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-3 py-2 rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-all duration-200"
+                  className={cn(
+                    "px-3 py-2 rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-all duration-200",
+                    pathname === item.href
+                      ? "text-primary border-b-2 border-primary"
+                      : "text-muted-foreground"
+                  )}
                 >
                   {item.label}
                 </Link>
@@ -93,7 +101,12 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
+                className={cn(
+                  "block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground transition-colors duration-200",
+                  pathname === item.href
+                    ? "text-primary font-bold"
+                    : "text-muted-foreground"
+                )}
                 onClick={toggleMenu}
               >
                 {item.label}

@@ -1,10 +1,10 @@
 "use client";
 import { ContactButtons } from "@/components/ContactButtons";
 import { HeroSlider } from "@/components/home/HeroSlider";
+import { Review } from "@/components/Review";
 import { SocialLinks } from "@/components/SocialLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { motion } from "framer-motion";
 import {
   BadgeCheck,
@@ -683,71 +683,16 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className={`relative ${
-                    index >= 3 && hasMoreTestimonials
-                      ? "blur-overlay before:absolute before:inset-0 before:z-10"
-                      : ""
-                  }`}
                 >
                   <Card className="h-full">
                     <CardContent className="pt-6">
-                      <div className="flex items-center gap-2 mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="h-5 w-5 fill-primary text-primary"
-                          />
-                        ))}
-                      </div>
-                      <p className="mb-6 text-muted-foreground">
-                        {testimonial.content}
+                      <Review
+                        name={testimonial.name}
+                        text={testimonial.content}
+                      />
+                      <p className="text-sm text-muted-foreground ml-16 -mt-2">
+                        {testimonial.role}
                       </p>
-                      {testimonial.projectImages &&
-                        testimonial.projectImages.length > 0 && (
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <div className="mb-6 cursor-pointer">
-                                <div className="aspect-video relative overflow-hidden rounded-lg">
-                                  <Image
-                                    src={testimonial.projectImages[0]}
-                                    alt="Project preview"
-                                    fill
-                                    className="object-cover hover:scale-105 transition-transform"
-                                  />
-                                  {testimonial.projectImages.length > 1 && (
-                                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                                      <p className="text-white font-medium">
-                                        View {testimonial.projectImages.length}{" "}
-                                        Photos
-                                      </p>
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
-                            </DialogTrigger>
-                            <DialogContent className="max-w-3xl">
-                              <ImageGallery
-                                images={testimonial.projectImages}
-                              />
-                            </DialogContent>
-                          </Dialog>
-                        )}
-                      <div className="flex items-center gap-4">
-                        <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                          <Image
-                            src={testimonial.image}
-                            alt={testimonial.name}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-semibold">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">
-                            {testimonial.role}
-                          </p>
-                        </div>
-                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
