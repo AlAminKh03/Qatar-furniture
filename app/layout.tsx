@@ -1,19 +1,30 @@
+import { ContactButtons } from "@/components/ContactButtons";
+import Footer from "@/components/Footer";
+import { GenerateFavicon } from "@/components/GenerateFavicon";
+
+import Navbar from "@/components/Navbar";
+import { SocialLinks } from "@/components/SocialLinks";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Qatar Furniture & Home Decor | Luxury Furniture Store in Qatar",
+  title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration in Qatar",
   description:
-    "Discover luxury furniture and home decor in Qatar. Browse our exclusive collection of modern and traditional furniture, home accessories, and interior decoration items.",
+    "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services in Doha and across Qatar.",
   keywords:
-    "qatar furniture, furniture in qatar, home decor qatar, luxury furniture qatar, interior decoration qatar",
+    "qatar furniture, furniture in qatar, home decor qatar, luxury furniture doha, interior design qatar, furniture store qatar, qatarfurnituredecor",
   metadataBase: new URL("https://qatarfurnituredecor.com"),
   category: "furniture",
   verification: {
-    google: "your-google-verification-code",
+    google: "wuWIEoRpkPuTjhHF6OVoAPH5lxltE5qq5qeKfgC-7fs",
   },
   openGraph: {
     title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration",
@@ -87,5 +98,42 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <GenerateFavicon />
+      </head>
+      <body className={inter.className}>
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-934R2JYRD8" />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <SocialLinks />
+          <ContactButtons />
+          <WhatsAppButton />
+          <Toaster />
+        </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FurnitureStore",
+              name: "Qatar Furniture Decor",
+              address: {
+                streetAddress: "YOUR_STREET_ADDRESS",
+                addressLocality: "Doha",
+              },
+            }),
+          }}
+        />
+      </body>
+    </html>
+  );
 }
