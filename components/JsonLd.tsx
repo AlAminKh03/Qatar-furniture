@@ -37,3 +37,28 @@ export function JsonLd() {
     />
   );
 }
+
+export function HomePageJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Store",
+          name: "Your Store Name",
+          description: "Luxury furniture and home decor store in Qatar",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "Qatar",
+            addressLocality: "Doha",
+          },
+          priceRange: "$$$$",
+          hasMap: "your-google-maps-url",
+          telephone: "your-phone-number",
+          openingHours: "Mo-Su 09:00-22:00",
+        }),
+      }}
+    />
+  );
+}

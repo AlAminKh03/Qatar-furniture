@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: "/private/",
     },
-    sitemap: "https://qatarfurnituredecor.com/sitemap.xml",
+    sitemap: "https://your-domain.com/sitemap.xml",
   };
 }

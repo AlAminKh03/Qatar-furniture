@@ -5,20 +5,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://qatarfurnituredecor.com",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1,
     },
     {
       url: "https://qatarfurnituredecor.com/products",
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
+      changeFrequency: "daily",
+      priority: 0.9,
     },
     {
       url: "https://qatarfurnituredecor.com/about",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: "https://qatarfurnituredecor.com/contact",
