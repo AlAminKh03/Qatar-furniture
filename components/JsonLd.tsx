@@ -24,8 +24,8 @@ export function JsonLd() {
           },
           geo: {
             "@type": "GeoCoordinates",
-            latitude: YOUR - LAT,
-            longitude: YOUR - LONG,
+            latitude: "25.276987",
+            longitude: "55.296233",
           },
           sameAs: [
             "YOUR-FACEBOOK-URL",

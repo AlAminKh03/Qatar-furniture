@@ -44,6 +44,9 @@ export function HeroSlider() {
               fill
               className="object-cover"
               priority
+              sizes="100vw"
+              quality={85}
+              unoptimized
             />
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/40" />

@@ -20,13 +20,10 @@ export const metadata: Metadata = {
   keywords:
     "qatar furniture, furniture in qatar, home decor qatar, luxury furniture doha, interior design qatar, furniture store qatar, qatarfurnituredecor",
   metadataBase: new URL("https://qatarfurnituredecor.com"),
-  alternates: {
-    canonical: "/",
-  },
+  category: "furniture",
   verification: {
     google: "your-google-verification-code",
   },
-  category: "furniture",
   openGraph: {
     title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration",
     description:
@@ -59,12 +56,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
-    },
-  },
-  alternates: {
-    languages: {
-      "ar-QA": "/ar",
-      "en-US": "/",
     },
   },
   icons: {
