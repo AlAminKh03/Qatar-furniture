@@ -126,10 +126,39 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "FurnitureStore",
               name: "Qatar Furniture Decor",
+              image: "https://qatarfurnituredecor.com/logo.jpg",
+              description:
+                "Premium furniture and home decor store in Qatar offering luxury furniture and interior design services.",
               address: {
-                streetAddress: "YOUR_STREET_ADDRESS",
+                "@type": "PostalAddress",
+                streetAddress: "Al Waab Street",
                 addressLocality: "Doha",
+                addressRegion: "Qatar",
+                postalCode: "24242",
+                addressCountry: "QA",
               },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: "25.2854",
+                longitude: "51.5310",
+              },
+              url: "https://qatarfurnituredecor.com",
+              telephone: "+974 5555 5555",
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  opens: "09:00",
+                  closes: "21:00",
+                },
+              ],
             }),
           }}
         />
