@@ -20,11 +20,18 @@ export const metadata: Metadata = {
   description:
     "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services in Doha and across Qatar.",
   keywords:
-    "qatar furniture, furniture in qatar, home decor qatar, luxury furniture doha, interior design qatar, furniture store qatar, qatarfurnituredecor",
+    "qatar furniture, furniture in qatar, home decor qatar, luxury furniture doha, majlish, premium furniture,  sofa, interior design qatar, furniture store qatar, أثاث قطر, ديكور منزلي قطر, متجر أثاث في قطر, أثاث فاخر الدوحة, furniture al waab, furniture the pearl qatar, furniture lusail, اثاث الدوحة, اثاث اللؤلؤة قطر, اثاث لوسيل",
   metadataBase: new URL("https://qatarfurnituredecor.com"),
-  category: "furniture",
+  category: "furniture, home decor, interior design, qatar business",
   verification: {
     google: "wuWIEoRpkPuTjhHF6OVoAPH5lxltE5qq5qeKfgC-7fs",
+  },
+  alternates: {
+    canonical: "https://qatarfurnituredecor.com",
+    languages: {
+      "ar-QA": "/ar",
+      "en-QA": "/",
+    },
   },
   openGraph: {
     title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration",
@@ -40,6 +47,7 @@ export const metadata: Metadata = {
       },
     ],
     locale: "en_QA",
+    alternateLocale: "ar_QA",
     type: "website",
   },
   twitter: {
@@ -125,6 +133,36 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FurnitureStore",
+              areaServed: {
+                "@type": "State",
+                name: "Qatar",
+                containsPlace: [
+                  {
+                    "@type": "City",
+                    name: "Doha",
+                  },
+                  {
+                    "@type": "City",
+                    name: "Al Wakrah",
+                  },
+                  {
+                    "@type": "City",
+                    name: "Al Rayyan",
+                  },
+                  {
+                    "@type": "City",
+                    name: "Al Khor",
+                  },
+                  {
+                    "@type": "City",
+                    name: "Lusail",
+                  },
+                  {
+                    "@type": "City",
+                    name: "The Pearl",
+                  },
+                ],
+              },
               name: "Qatar Furniture Decor",
               image: "https://qatarfurnituredecor.com/logo.jpg",
               description:

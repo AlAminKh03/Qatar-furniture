@@ -3,22 +3,11 @@
 export function GenerateFavicon() {
   return (
     <>
+      <link rel="icon" type="image/svg+xml" href="/furniture-favicon.svg" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/qfd-apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/qfd-favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/qfd-favicon-16x16.png"
+        href="/furniture-apple-touch-icon.png"
       />
       <link rel="manifest" href="/site.webmanifest" />
     </>
