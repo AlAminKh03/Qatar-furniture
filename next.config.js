@@ -8,6 +8,13 @@ const nextConfig = {
     unoptimized: true,
     domains: ["qatarfurnituredecor.com"],
   },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(ico|png|svg)$/,
+      type: "asset/resource",
+    });
+    return config;
+  },
 };
 
 module.exports = nextConfig;
