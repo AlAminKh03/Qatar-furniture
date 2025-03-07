@@ -25,12 +25,20 @@ export const metadata: Metadata = {
   category: "furniture, home decor, interior design, qatar business",
   verification: {
     google: "wuWIEoRpkPuTjhHF6OVoAPH5lxltE5qq5qeKfgC-7fs",
+    other: {
+      "geo.region": "QA",
+      "geo.placename": "Doha",
+      "geo.position": "25.2854;51.5310",
+      ICBM: "25.2854, 51.5310",
+    },
   },
   alternates: {
     canonical: "https://qatarfurnituredecor.com",
     languages: {
       "ar-QA": "/ar",
       "en-QA": "/",
+      "en-US": "/",
+      ar: "/ar",
     },
   },
   openGraph: {
@@ -182,19 +190,26 @@ export default function RootLayout({
               },
               url: "https://qatarfurnituredecor.com",
               telephone: "+974 5555 5555",
+              priceRange: "QAR $$$$",
+              hasMap: "https://goo.gl/maps/YOUR_GOOGLE_MAPS_LINK",
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
                   dayOfWeek: [
+                    "Sunday",
                     "Monday",
                     "Tuesday",
                     "Wednesday",
                     "Thursday",
-                    "Friday",
-                    "Saturday",
                   ],
                   opens: "09:00",
-                  closes: "21:00",
+                  closes: "22:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Friday", "Saturday"],
+                  opens: "13:00",
+                  closes: "22:00",
                 },
               ],
             }),
