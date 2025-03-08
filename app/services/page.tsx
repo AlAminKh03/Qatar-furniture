@@ -31,14 +31,14 @@ const services = [
   },
   {
     icon: <Hammer className="h-12 w-12 text-primary" />,
-    title: "Furniture Repair & Restoration",
+    title: "SPC Flooring Installation",
     description:
-      "Expert repair services for all types of furniture - from antiques to modern pieces. We fix chairs, tables, beds, sofas, and any furniture item.",
+      "Professional SPC flooring installation with meticulous attention to detail. We handle residential and commercial projects of any size.",
     features: [
-      "All furniture types",
-      "Structural repairs",
-      "Surface refinishing",
-      "Hardware fixes",
+      "Subfloor preparation",
+      "Moisture barrier",
+      "Precision cutting",
+      "Perfect finishing",
     ],
   },
   {

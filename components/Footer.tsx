@@ -19,7 +19,7 @@ const Footer = () => {
               <span className="font-bold text-lg">Qatar Furniture Decor</span>
             </div>
             <p className="mt-2 text-sm text-muted-foreground">
-              Quality craftsmanship for your home and business since 1990.
+              Quality craftsmanship for your home and business since 2020.
             </p>
           </div>
 
@@ -92,6 +92,21 @@ const Footer = () => {
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} Qatar Furniture Decor. All rights
             reserved.
+          </p>
+          <p className="text-center text-xs text-muted-foreground mt-1">
+            Developed by{" "}
+            <a
+              href="https://www.linkedin.com/in/alaminkhan03/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-block font-bold hover:text-primary transition-colors group "
+            >
+              Crafter
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary shadow-[0_0_10px_#000] transition-all duration-300 group-hover:w-full group-hover:shadow-[0_0_15px_rgba(var(--primary))]"></span>
+              <span className="absolute -right-4 top-0 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                ✨
+              </span>
+            </a>
           </p>
         </div>
       </div>
