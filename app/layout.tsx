@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Qatar Furniture Decor",
     images: [
       {
-        url: "https://qatarfurnituredecor.com/og-image.jpg",
+        url: "https://qatarfurnituredecor.com/images/og/og-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration",
     description:
       "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services.",
-    images: ["https://qatarfurnituredecor.com/og-image.jpg"],
+    images: ["https://qatarfurnituredecor.com/images/og/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -76,7 +76,15 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/icon.png" }],
+    icon: "/images/favicon/icon.png",
+  },
+  applicationName: "Qatar Furniture Decor",
+  authors: [{ name: "Qatar Furniture Decor" }],
+  generator: "Next.js",
+  publisher: "Qatar Furniture Decor",
+  formatDetection: {
+    telephone: true,
+    address: true,
   },
 };
 
