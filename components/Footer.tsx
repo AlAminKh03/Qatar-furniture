@@ -1,4 +1,5 @@
-import { Hammer, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -8,7 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2">
-              <Hammer className="h-6 w-6" />
+              {/* <Hammer className="h-6 w-6" /> */}
+              <Image
+                src="/images/logo.png"
+                alt="Qatar Furniture Decor"
+                width={50}
+                height={50}
+              />
               <span className="font-bold text-lg">Qatar Furniture Decor</span>
             </div>
             <p className="mt-2 text-sm text-muted-foreground">

@@ -23,14 +23,14 @@ export function OptimizedImage({
   return (
     <Image
       src={src}
-      alt={alt}
+      alt={alt || "Qatar Furniture Decor"}
       className={`
         ${className}
         ${isLoading ? "blur-sm grayscale" : "blur-0 grayscale-0"}
         transition-all duration-300
       `}
-      width={width}
-      height={height}
+      width={width || 500}
+      height={height || 300}
       fill={fill}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       quality={85}

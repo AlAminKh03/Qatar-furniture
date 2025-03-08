@@ -1,8 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Hammer, Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -29,7 +30,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Hammer className="h-8 w-8 text-primary transition-colors duration-200" />
+              {/* <Hammer className="h-8 w-8 text-primary transition-colors duration-200" /> */}
+              <Image
+                src="/images/logo.png"
+                alt="Qatar Furniture Decor"
+                width={50}
+                height={50}
+              />
               <span className="font-bold text-xl">Qatar Furniture Decor</span>
             </Link>
           </div>
