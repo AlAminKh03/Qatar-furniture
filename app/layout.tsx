@@ -1,6 +1,5 @@
 import { ContactButtons } from "@/components/ContactButtons";
 import Footer from "@/components/Footer";
-import { GenerateFavicon } from "@/components/GenerateFavicon";
 
 import Navbar from "@/components/Navbar";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -77,35 +76,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "/favicon-16x16.png",
-        sizes: "16x16",
-        type: "image/png",
-      },
-      {
-        url: "/favicon-32x32.png",
-        sizes: "32x32",
-        type: "image/png",
-      },
-    ],
-    apple: [
-      {
-        url: "/apple-touch-icon.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
-    ],
-    other: [
-      {
-        rel: "manifest",
-        url: "/site.webmanifest",
-      },
-    ],
+    icon: [{ url: "/icon.png" }],
   },
 };
 
@@ -116,9 +87,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <GenerateFavicon />
-      </head>
       <body className={inter.className}>
         <GoogleAnalytics GA_MEASUREMENT_ID="G-934R2JYRD8" />
         <ThemeProvider
