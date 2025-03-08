@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/favicon/icon.png",
+    icon: "/favicon.ico",
   },
   applicationName: "Qatar Furniture Decor",
   authors: [{ name: "Qatar Furniture Decor" }],
@@ -165,7 +165,7 @@ export default function RootLayout({
                 longitude: "51.5310",
               },
               url: "https://qatarfurnituredecor.com",
-              telephone: "+974 5555 5555",
+              telephone: "+97466631317",
               priceRange: "QAR $$$$",
               hasMap: "https://goo.gl/maps/YOUR_GOOGLE_MAPS_LINK",
               openingHoursSpecification: [
