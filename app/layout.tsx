@@ -15,9 +15,12 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration in Qatar",
+  title: {
+    default: "Qatar Furniture & Decor Services",
+    template: "%s | Qatar Furniture & Decor",
+  },
   description:
-    "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services in Doha and across Qatar.",
+    "Professional furniture and decor services in Qatar. We offer custom furniture, upholstery, curtains, and more.",
   keywords:
     "qatar furniture, furniture in qatar, home decor qatar, luxury furniture doha, majlish, premium furniture,  sofa, interior design qatar, furniture store qatar, أثاث قطر, ديكور منزلي قطر, متجر أثاث في قطر, أثاث فاخر الدوحة, furniture al waab, furniture the pearl qatar, furniture lusail, اثاث الدوحة, اثاث اللؤلؤة قطر, اثاث لوسيل",
   metadataBase: new URL("https://qatarfurnituredecor.com"),
@@ -41,21 +44,20 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration",
+    title: "Qatar Furniture & Decor Services",
     description:
-      "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services.",
-    url: "https://qatarfurnituredecor.com",
-    siteName: "Qatar Furniture Decor",
+      "Professional furniture and decor services in Qatar. We offer custom furniture, upholstery, curtains, and more.",
     images: [
       {
-        url: "https://qatarfurnituredecor.com/social.jpg",
+        url: "/social.jpg",
         width: 1200,
         height: 630,
+        alt: "Qatar Furniture & Decor Services",
       },
     ],
-    locale: "en_QA",
-    alternateLocale: "ar_QA",
     type: "website",
+    locale: "en_US",
+    siteName: "Qatar Furniture & Decor",
   },
   twitter: {
     card: "summary_large_image",
@@ -76,7 +78,36 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      {
+        url: "/favicon.ico",
+        sizes: "any",
+      },
+      {
+        url: "/favicon-16x16.png",
+        type: "image/png",
+        sizes: "16x16",
+      },
+      {
+        url: "/favicon-32x32.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/android-chrome-192x192.png",
+        type: "image/png",
+        sizes: "192x192",
+      },
+      {
+        url: "/android-chrome-512x512.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+    ],
+    apple: {
+      url: "/apple-touch-icon.png",
+      sizes: "180x180",
+    },
   },
   applicationName: "Qatar Furniture Decor",
   authors: [{ name: "Qatar Furniture Decor" }],
@@ -86,6 +117,7 @@ export const metadata: Metadata = {
     telephone: true,
     address: true,
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -95,6 +127,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={inter.className}>
         <GoogleAnalytics GA_MEASUREMENT_ID="G-934R2JYRD8" />
         <ThemeProvider
