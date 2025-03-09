@@ -9,7 +9,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import GoogleAnalytics from "./components/GoogleAnalytics";
+import GoogleAnalytics from "./_components/GoogleAnalytics";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Qatar Furniture Decor",
     images: [
       {
-        url: "https://qatarfurnituredecor.com/images/og/og-image.jpg",
+        url: "https://qatarfurnituredecor.com/social.jpg",
         width: 1200,
         height: 630,
       },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration",
     description:
       "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services.",
-    images: ["https://qatarfurnituredecor.com/images/og/og-image.jpg"],
+    images: ["https://qatarfurnituredecor.com/social.jpg"],
   },
   robots: {
     index: true,
@@ -148,7 +148,7 @@ export default function RootLayout({
                 ],
               },
               name: "Qatar Furniture Decor",
-              image: "https://qatarfurnituredecor.com/logo.jpg",
+              image: "https://qatarfurnituredecor.com/social.jpg",
               description:
                 "Premium furniture and home decor store in Qatar offering luxury furniture and interior design services.",
               address: {

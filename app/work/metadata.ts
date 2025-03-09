@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Work from "./work";
 
 export const metadata: Metadata = {
   title: "Our Work | Interior Solutions Portfolio",
@@ -30,7 +29,3 @@ export const metadata: Metadata = {
     images: ["/social.jpg"],
   },
 };
-
-export default function WorkPage() {
-  return <Work />;
-}
