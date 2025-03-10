@@ -15,15 +15,15 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://qatarfurnituredecor.com"),
   title: {
-    default: "Qatar Furniture & Decor Services",
+    default: "Qatar Furniture & Decor Services | Luxury Furniture in Qatar",
     template: "%s | Qatar Furniture & Decor",
   },
   description:
-    "Professional furniture and decor services in Qatar. We offer custom furniture, upholstery, curtains, and more.",
+    "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services in Doha, Qatar.",
   keywords:
     "qatar furniture, furniture in qatar, home decor qatar, luxury furniture doha, majlish, premium furniture,  sofa, interior design qatar, furniture store qatar, أثاث قطر, ديكور منزلي قطر, متجر أثاث في قطر, أثاث فاخر الدوحة, furniture al waab, furniture the pearl qatar, furniture lusail, اثاث الدوحة, اثاث اللؤلؤة قطر, اثاث لوسيل",
-  metadataBase: new URL("https://qatarfurnituredecor.com"),
   category: "furniture, home decor, interior design, qatar business",
   verification: {
     google: "wuWIEoRpkPuTjhHF6OVoAPH5lxltE5qq5qeKfgC-7fs",
@@ -44,27 +44,28 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Qatar Furniture & Decor Services",
+    title: "Qatar Furniture & Decor Services | Luxury Furniture in Qatar",
     description:
-      "Professional furniture and decor services in Qatar. We offer custom furniture, upholstery, curtains, and more.",
+      "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services in Doha, Qatar.",
     images: [
       {
-        url: "/social.jpg",
+        url: "https://qatarfurnituredecor.com/social.jpg",
         width: 1200,
         height: 630,
         alt: "Qatar Furniture & Decor Services",
       },
     ],
+    siteName: "Qatar Furniture & Decor",
     type: "website",
     locale: "en_US",
-    siteName: "Qatar Furniture & Decor",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Qatar Furniture Decor | Luxury Furniture & Home Decoration",
+    title: "Qatar Furniture & Decor | Luxury Furniture in Qatar",
     description:
       "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services.",
     images: ["https://qatarfurnituredecor.com/social.jpg"],
+    creator: "@qatarfurniture",
   },
   robots: {
     index: true,
