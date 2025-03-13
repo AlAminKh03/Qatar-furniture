@@ -174,6 +174,7 @@ export default function RootLayout({
                 addressLocality: "Doha",
                 addressRegion: "Qatar",
                 addressCountry: "QA",
+                postalCode: "24242",
               },
               geo: {
                 "@type": "GeoCoordinates",
