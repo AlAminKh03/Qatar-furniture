@@ -23,16 +23,17 @@ export const metadata: Metadata = {
   description:
     "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services in Doha, Qatar.",
   keywords:
-    "qatar furniture, furniture in qatar, home decor qatar, luxury furniture doha, majlish, premium furniture,  sofa, interior design qatar, furniture store qatar, أثاث قطر, ديكور منزلي قطر, متجر أثاث في قطر, أثاث فاخر الدوحة, furniture al waab, furniture the pearl qatar, furniture lusail, اثاث الدوحة, اثاث اللؤلؤة قطر, اثاث لوسيل",
+    "Qatar Furniture Decor, qatarfurnituredecor, qatar furniture, furniture in qatar, home decor qatar, luxury furniture doha, majlish, premium furniture, sofa, interior design qatar, furniture store qatar, أثاث قطر, ديكور منزلي قطر, متجر أثاث في قطر, أثاث فاخر الدوحة, furniture al waab, furniture the pearl qatar, furniture lusail, اثاث الدوحة, اثاث اللؤلؤة قطر, اثاث لوسيل, custom furniture qatar, modern furniture qatar, office furniture qatar, bedroom furniture qatar, living room furniture qatar, dining room sets qatar, outdoor furniture qatar",
   category: "furniture, home decor, interior design, qatar business",
   verification: {
     google: "wuWIEoRpkPuTjhHF6OVoAPH5lxltE5qq5qeKfgC-7fs",
-    other: {
-      "geo.region": "QA",
-      "geo.placename": "Doha",
-      "geo.position": "25.2854;51.5310",
-      ICBM: "25.2854, 51.5310",
-    },
+  },
+  other: {
+    "geo.region": "QA",
+    "geo.placename": "Doha",
+    "geo.position": "25.2854;51.5310",
+    ICBM: "25.2854, 51.5310",
+    "fb:app_id": "1234567890",
   },
   alternates: {
     canonical: "https://qatarfurnituredecor.com",
@@ -44,9 +45,12 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
     title: "Qatar Furniture & Decor Services | Luxury Furniture in Qatar",
     description:
       "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services in Doha, Qatar.",
+    url: "https://qatarfurnituredecor.com",
+    siteName: "Qatar Furniture & Decor",
     images: [
       {
         url: "https://qatarfurnituredecor.com/social.jpg",
@@ -55,8 +59,6 @@ export const metadata: Metadata = {
         alt: "Qatar Furniture & Decor Services",
       },
     ],
-    siteName: "Qatar Furniture & Decor",
-    type: "website",
     locale: "en_US",
   },
   twitter: {
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
     title: "Qatar Furniture & Decor | Luxury Furniture in Qatar",
     description:
       "Premium furniture and home decor in Qatar. Explore our collection of luxury furniture, modern decorations, and interior design services.",
-    images: ["https://qatarfurnituredecor.com/social.jpg"],
+    images: ["/social.jpg"],
     creator: "@qatarfurniture",
   },
   robots: {
@@ -152,7 +154,52 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "FurnitureStore",
+              "@type": "LocalBusiness",
+              "@id": "https://qatarfurnituredecor.com",
+              name: "Qatar Furniture Decor",
+              image: {
+                "@type": "ImageObject",
+                url: "https://qatarfurnituredecor.com/social.jpg",
+                width: 1200,
+                height: 630,
+              },
+              description:
+                "Premium furniture and home decor store in Qatar offering luxury furniture and interior design services.",
+              url: "https://qatarfurnituredecor.com",
+              telephone: "+97466631317",
+              priceRange: "$$$$",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Al Mansoura",
+                addressLocality: "Doha",
+                addressRegion: "Qatar",
+                addressCountry: "QA",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 25.2692576,
+                longitude: 51.5294645,
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday",
+                ],
+                opens: "00:00",
+                closes: "23:59",
+              },
+              sameAs: [
+                "https://www.facebook.com/qatarfurnituredecor",
+                "https://www.instagram.com/qatarfurnituredecor",
+              ],
+              hasMap:
+                "https://www.google.com/maps/place/Al+Mansoura,+Doha,+Qatar/@25.2688726,51.5238892,1966m/",
               areaServed: {
                 "@type": "State",
                 name: "Qatar",
@@ -183,45 +230,32 @@ export default function RootLayout({
                   },
                 ],
               },
-              name: "Qatar Furniture Decor",
-              image: "https://qatarfurnituredecor.com/social.jpg",
-              description:
-                "Premium furniture and home decor store in Qatar offering luxury furniture and interior design services.",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Al Waab Street",
-                addressLocality: "Doha",
-                addressRegion: "Qatar",
-                postalCode: "24242",
-                addressCountry: "QA",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "25.2854",
-                longitude: "51.5310",
-              },
-              url: "https://qatarfurnituredecor.com",
-              telephone: "+97466631317",
-              priceRange: "QAR $$$$",
-              hasMap: "https://goo.gl/maps/YOUR_GOOGLE_MAPS_LINK",
-              openingHoursSpecification: [
+              makesOffer: [
                 {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Sunday",
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                  ],
-                  opens: "09:00",
-                  closes: "22:00",
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Custom Furniture Making",
+                    description: "Bespoke furniture design and manufacturing",
+                  },
                 },
                 {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Friday", "Saturday"],
-                  opens: "13:00",
-                  closes: "22:00",
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Upholstery Services",
+                    description:
+                      "Professional furniture upholstery and reupholstery",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Interior Design",
+                    description:
+                      "Complete interior design and decoration services",
+                  },
                 },
               ],
             }),
