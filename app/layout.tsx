@@ -33,15 +33,13 @@ export const metadata: Metadata = {
     "geo.placename": "Doha",
     "geo.position": "25.2854;51.5310",
     ICBM: "25.2854, 51.5310",
-    "fb:app_id": "1234567890",
+    "property:fb:app_id": "1234567890",
   },
   alternates: {
     canonical: "https://qatarfurnituredecor.com",
     languages: {
-      "ar-QA": "/ar",
-      "en-QA": "/",
-      "en-US": "/",
-      ar: "/ar",
+      "en-US": "https://qatarfurnituredecor.com",
+      "ar-QA": "https://qatarfurnituredecor.com/ar",
     },
   },
   openGraph: {
